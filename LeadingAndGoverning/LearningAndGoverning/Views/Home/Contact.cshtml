@@ -1,0 +1,60 @@
+﻿@model LearningAndGoverning.ViewModels.ContactViewModel
+@{ 
+    
+    string successMessage = (TempData["Success"] != null 
+                          && TempData["Success"].ToString().ToLower() == "success") ? "Success" : string.Empty;
+
+}
+<div class="row">&nbsp;</div>
+
+@if (successMessage != string.Empty)
+{
+    <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4>Huzzah!</h4>
+        <p>Your message to us was sent successfully!</p>
+    </div>
+}
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Contact Us</h2>
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, htmlAttributes: new { @class = "form-horizontal" }))
+                {
+                    <fieldset>
+                        <div class="form-group">
+                            @Html.Label("Email: ", htmlAttributes: new { @class = "col-lg-2 control-label", @placeholder = "me@example.com" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(m => m.Email, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Email)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("Subject: ", htmlAttributes: new { @class = "col-lg-2 control-label" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(m => m.Subject, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Subject)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("Message: ", htmlAttributes: new { @class = "col-lg-2 control-label" })
+                            <div class="col-lg-10">
+                                @Html.TextAreaFor(m => m.Body, htmlAttributes: new { @class = "form-control", @rows = "5" })
+                                @Html.ValidationMessageFor(m => m.Body)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2 pull-right">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="reset" class="btn btn-default">Cancel</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                }
+            </div>
+        </div>
+    </div>
+</div>

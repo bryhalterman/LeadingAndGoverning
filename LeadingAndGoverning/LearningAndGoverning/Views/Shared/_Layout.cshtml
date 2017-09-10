@@ -9,55 +9,14 @@
 
 </head>
 <body>
-    
-    <div class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Leading and Governing", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Clients", "Clients", "Home")</li>
-                </ul>
-                @*@Html.Partial("_LoginPartial")*@
-            </div>
-        </div>
-    </div>
+    <header>
+        @Html.Partial("_Header")
+    </header>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <p class="text-muted"></p>
-                </div>
-                <div class="col-md-4">
-                    <p>
-                        <address class="text-muted">
-                            &copy; @DateTime.Now.Year - Leading and Governing Associates, Inc <br />
-                            106 Weathervane Drive<br />
-                            Carrboro, NC 27510<br />
-                        </address>
-                        <span class="text-muted">
-                            Designed by Halterman Consulting<br />
-                            Themed with <a href="https://www.bootswatch.com">Bootswatch</a>
-                        </span>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p class="text-muted"></p>
-                </div>
-            </div>
-
-
-
+            @Html.Partial("_Footer")
         </footer>
     </div>
 

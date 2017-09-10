@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LearningAndGoverning.Services;
+using LearningAndGoverning.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,21 +17,55 @@ namespace LearningAndGoverning.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Clients()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
 
         public ActionResult Services()
         {
             return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ContactViewModel vm = new ContactViewModel();
+
+            TempData["Success"] = string.Empty;
+            TempData["Error"] = string.Empty;
+
+            return View(vm);
+        }
+
+        [HttpPost]
+        public ActionResult Contact(ContactViewModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+            else
+            {
+                using (MessagingService messenger = new MessagingService())
+                {
+                    string success = "success";
+                    bool response = messenger.SendMessage(vm);
+
+                    if (response)
+                    {
+                        TempData["Success"] = success;
+                    }
+                    else
+                    {
+                        TempData["Error"] = "There was an error processing your request. Please try again. " + response;
+                    }
+                }
+            }
+
+            return View(vm);
         }
     }
 }

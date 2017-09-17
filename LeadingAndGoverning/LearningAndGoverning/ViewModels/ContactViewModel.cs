@@ -8,15 +8,15 @@ namespace LearningAndGoverning.ViewModels
 {
     public class ContactViewModel
     {
-        [Required]
-        [MaxLength(100)]
+        [Required(ErrorMessage = "A subject is required.")]
+        [MaxLength(100, ErrorMessage = "Subject can be no longer than 100 characters long.")]
         public string Subject { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "A message is required.")]
         public string Body { get; set; }
 
-        [Required]
-        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "Email is required.")]
+        [DataType(DataType.EmailAddress, ErrorMessage = "Please enter a valid email address.")]
         public string Email { get; set; }
     }
 }

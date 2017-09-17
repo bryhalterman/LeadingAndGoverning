@@ -1,9 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string successMessage = (TempData["Success"] != null) ? TempData["Success"].ToString() : string.Empty;
+    string successTitle = (TempData["SuccessTitle"] != null) ? TempData["SuccessTitle"].ToString() : string.Empty;
+    string errorMessage = (TempData["Error"] != null) ? TempData["Error"].ToString() : string.Empty;
+    string errorTitle = (TempData["ErrorTitle"] != null) ? TempData["ErrorTitle"].ToString() : string.Empty;
+
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leading and Governing, Inc</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Encode+Sans+Condensed|Oxygen">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -12,6 +20,29 @@
     <header>
         @Html.Partial("_Header")
     </header>
+    @*Alerts*@
+    @if (successMessage != string.Empty)
+    {
+        <div class="alert alert-dismissable alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            @if (successTitle != string.Empty)
+            {
+                <h4>@successTitle</h4>
+            }
+            <p>@successMessage</p>
+        </div>
+    }
+    @if (errorMessage != string.Empty)
+    {
+        <div class="alert alert-dismissable alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            @if (errorTitle != string.Empty)
+            {
+                <h4>@errorTitle</h4>
+            }
+            <p>@errorMessage</p>
+        </div>
+    }
     <div class="container body-content">
         @RenderBody()
         <hr />

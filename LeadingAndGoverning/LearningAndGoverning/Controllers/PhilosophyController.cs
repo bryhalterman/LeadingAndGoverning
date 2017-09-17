@@ -1,6 +1,4 @@
-﻿using LearningAndGoverning.Services;
-using LearningAndGoverning.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +6,9 @@ using System.Web.Mvc;
 
 namespace LearningAndGoverning.Controllers
 {
-    public class HomeController : Controller
+    public class PhilosophyController : Controller
     {
+        // GET: Philosophy
         public ActionResult Index()
         {
             return View();

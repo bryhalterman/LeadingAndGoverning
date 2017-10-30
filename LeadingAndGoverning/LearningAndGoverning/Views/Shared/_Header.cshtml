@@ -1,7 +1,4 @@
-﻿<div class="row" id="header-color-bar">
-    &nbsp;
-</div>
-<div class="navbar navbar-default">
+﻿<div class="navbar navbar-custom">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -10,17 +7,17 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="@Url.Action("Index","Home")" class="pull-left">
-                <img src="~/Content/Images/L&G_log_no_text.svg" class="" width="50" />
+                <img width="50" onerror="this.src='~/Content/Images/lg_logo_no_text.png'" src="~/Content/Images/lg_logo_no_text.svg" alt="Leading and Governing Associates Compass logo without text." />
             </a>
             @Html.ActionLink("Leading and Governing Associates", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Welcome", "Index", "Home", new { area = "" }, new { @class = "navbar-link" })</li>
-                <li>@Html.ActionLink("Our Services", "Index", "OurServices", new { area = "" }, new { @class = "navbar-link" })</li>
-                <li>@Html.ActionLink("Our Links", "Index", "Links", new { area = "" }, new { @class = "navbar-link" })</li>
-                <li>@Html.ActionLink("Our Philosophy", "Index", "Philosophy", new { area = "" }, new { @class = "navbar-link" })</li>
-                <li>@Html.ActionLink("Contact Us", "Index", "Contact", new { area = "" }, new { @class = "navbar-link" })</li>
+                <li>@Html.ActionLink("Welcome", "Index", "Home")</li>
+                <li>@Html.ActionLink("Our Services", "Index", "OurServices")</li>
+                <li>@Html.ActionLink("Our Links", "Index", "Links")</li>
+                <li>@Html.ActionLink("Our Philosophy", "Index", "Philosophy")</li>
+                <li>@Html.ActionLink("Contact Us", "Index", "Contact")</li>
             </ul>
             @*@Html.Partial("_LoginPartial")*@
         </div>

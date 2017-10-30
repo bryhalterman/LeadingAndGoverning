@@ -202,3 +202,7 @@ fieldset[disabled] .navbar-custom .btn-link:focus {
 .spacer {
     height: 100px;
 }
+
+.pad-left {
+    padding-left: 2.5em;
+}

@@ -1,4 +1,4 @@
-﻿using LeadingAndGoverning.Services;
+﻿using LeadingAndGoverning.SystemServices;
 using LeadingAndGoverning.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -21,6 +21,10 @@ namespace LeadingAndGoverning.Controllers
         [HttpPost]
         public ActionResult Index(ContactViewModel vm)
         {
+            TempData["ErrorTitle"] = null;
+            TempData["Error"] = null;
+            TempData["SuccessTitle"] = null;
+            TempData["Success"] = null;
             if (!ModelState.IsValid)
             {
                 return View(vm);

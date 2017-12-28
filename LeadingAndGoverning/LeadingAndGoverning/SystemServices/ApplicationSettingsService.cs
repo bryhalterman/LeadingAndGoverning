@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Configuration;
 
-namespace LeadingAndGoverning.Services
+namespace LeadingAndGoverning.SystemServices
 {
     public class ApplicationSettingsService : IDisposable
     {
@@ -32,7 +32,7 @@ namespace LeadingAndGoverning.Services
             {
                 if (disposing)
                 {
-                    
+
                 }
 
                 disposedValue = true;

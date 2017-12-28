@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace LeadingAndGoverning.Controllers
 {
-    public class PhilosophyController : Controller
+    public class ApproachController : Controller
     {
         // GET: Philosophy
         public ActionResult Index()

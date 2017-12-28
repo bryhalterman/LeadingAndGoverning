@@ -14,12 +14,15 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Welcome", "Index", "Home")</li>
-                <li>@Html.ActionLink("Services", "Index", "OurServices")</li>
-                <li>@Html.ActionLink("Links", "Index", "Links")</li>
-                <li>@Html.ActionLink("Our Philosophy", "Index", "Philosophy")</li>
+                <li>@Html.ActionLink("Services", "Index", "Services")</li>
+                <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
+                <li>@Html.ActionLink("Our Approach", "Index", "Approach")</li>
                 <li>@Html.ActionLink("Contact Us", "Index", "Contact")</li>
             </ul>
-            @*@Html.Partial("_LoginPartial")*@
+            @if (Request.IsAuthenticated)
+            {
+                @Html.Partial("_LoginPartial")
+            }
         </div>
     </div>
 </div>

@@ -8,7 +8,7 @@ namespace LeadingAndGoverning.Controllers
 {
     public class ServicesController : Controller
     {
-        // GET: OurServices
+        // GET: Services
         public ActionResult Index()
         {
             return View();

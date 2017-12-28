@@ -21,9 +21,12 @@ namespace LeadingAndGoverning.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("LeadingAndGoverning", throwIfV1Schema: false)
         {
         }
+
+        // Add models here in alphabetical order
+
 
         public static ApplicationDbContext Create()
         {

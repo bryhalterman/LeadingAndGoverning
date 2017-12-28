@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeadingAndGoverning", "LearningAndGoverning\LeadingAndGoverning.csproj", "{14A96C94-BA3F-4E6D-8D72-02164533A762}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeadingAndGoverning", "LeadingAndGoverning\LeadingAndGoverning.csproj", "{14A96C94-BA3F-4E6D-8D72-02164533A762}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0482BEFF-75B8-4389-8238-7F65199BC043}"
+	ProjectSection(SolutionItems) = preProject
+		WE-Palette.css = WE-Palette.css
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

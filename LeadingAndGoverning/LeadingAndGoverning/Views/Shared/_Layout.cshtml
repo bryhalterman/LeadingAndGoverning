@@ -12,9 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leading and Governing, Inc</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Encode+Sans+Condensed|Oxygen">
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
     <header>
@@ -23,7 +25,7 @@
     @*Alerts*@
     @if (successMessage != string.Empty)
     {
-        <div class="alert alert-dismissable alert-success">
+        <div class="alert alert-dismissable alert-success text-center">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             @if (successTitle != string.Empty)
             {
@@ -34,7 +36,7 @@
     }
     @if (errorMessage != string.Empty)
     {
-        <div class="alert alert-dismissable alert-success">
+        <div class="alert alert-dismissable alert-success text-center">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             @if (errorTitle != string.Empty)
             {
@@ -50,9 +52,5 @@
             @Html.Partial("_Footer")
         </footer>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

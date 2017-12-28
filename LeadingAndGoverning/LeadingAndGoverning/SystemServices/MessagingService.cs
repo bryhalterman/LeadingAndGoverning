@@ -9,7 +9,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Web;
 
-namespace LeadingAndGoverning.Services
+namespace LeadingAndGoverning.SystemServices
 {
     public class MessagingService : IDisposable
     {
@@ -29,7 +29,7 @@ namespace LeadingAndGoverning.Services
 
             smtpClient.Host = appSettings.SMTPHostname;
             smtpClient.Port = Convert.ToInt16(appSettings.SMTPTLSPort);
-            smtpClient.EnableSsl = false;
+            smtpClient.EnableSsl = true;
             smtpClient.Credentials = credentials;
         }
 

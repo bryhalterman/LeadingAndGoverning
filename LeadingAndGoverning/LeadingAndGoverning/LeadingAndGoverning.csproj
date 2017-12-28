@@ -169,12 +169,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ApproachController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
-    <Compile Include="Controllers\PhilosophyController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -186,8 +187,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Services\ApplicationSettingsService.cs" />
-    <Compile Include="Services\MessagingService.cs" />
+    <Compile Include="Migrations\201711070314093_Initial.cs" />
+    <Compile Include="Migrations\201711070314093_Initial.Designer.cs">
+      <DependentUpon>201711070314093_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Tile.cs" />
+    <Compile Include="SystemServices\ApplicationSettingsService.cs" />
+    <Compile Include="SystemServices\MessagingService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="ViewModels\ContactViewModel.cs" />
@@ -198,6 +205,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Backgrounds\dust_scratches.png" />
     <Content Include="Content\Images\Backgrounds\light_toast.png" />
     <Content Include="Content\Images\Backgrounds\light_toast_%402X.png" />
     <Content Include="Content\Images\Backgrounds\paper.png" />
@@ -244,6 +252,7 @@
     <Content Include="Content\Images\Social\wordpress.png" />
     <Content Include="Content\Images\Social\yahoo.png" />
     <Content Include="Content\Images\Social\youtube.png" />
+    <Content Include="Content\summernote.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -255,14 +264,23 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\LnG.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\summernote.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -301,7 +319,9 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Clients\Index.cshtml" />
-    <Content Include="Views\Philosophy\Index.cshtml" />
+    <Content Include="Views\Approach\Index.cshtml" />
+    <Content Include="Views\ServicesOLD\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Services\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -314,6 +334,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711070314093_Initial.resx">
+      <DependentUpon>201711070314093_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

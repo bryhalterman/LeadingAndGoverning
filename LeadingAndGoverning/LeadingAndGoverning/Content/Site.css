@@ -1,11 +1,17 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Encode+Sans+Condensed|Oxygen');
+﻿@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Cinzel|Encode+Sans+Condensed|Oxygen|Acme|');
 /* Font Families:
     font-family: 'Cinzel Decorative', cursive;
+    font-family: 'ABeeZee', sans-serif;
     font-family: 'Encode Sans Condensed', sans-serif;
     font-family: 'Oxygen', sans-serif;
+    font-family: 'Acme', sans-serif;
+    font-family: 'Special Elite', sans-serif;
+    font-family: 'Montserrat Subrayada', sans-serif;
+
 */
 body {
     background-image: url('Images/Backgrounds/dust_scratches.png');
+    font-family: 'Oxygen', sans-serif;
 }
 
 hr {
@@ -263,6 +269,11 @@ hr {
     display: block;
     margin: 0 auto;
 }
+
+.page-title {
+    font-family: 'ABeeZee', sans-serif;
+    text-align: center;
+}
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
 }
@@ -282,3 +293,26 @@ hr {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 }
+
+.banner {
+    margin-top: -15px;
+    height: auto;
+    background-image: url('Images/Backgrounds/topography.png');
+}
+    .banner > .banner-inner {
+        padding-top: 5px;
+        /*background-color: rgba(46, 139, 87, 0.25);*/
+        /*background-image: url('Images/Backgrounds/tileable_wood_texture.png');*/
+        /*background-image: url('Images/Backgrounds/paper.png');*/
+
+        /*background-image: url('Images/Backgrounds/Seigaiha.png');*/
+        /*background-image: url('Images/Backgrounds/light_toast.png');*/
+        background-repeat: repeat;
+        border-radius: 3px;
+        border-bottom: solid #e2e2e2;
+    }
+
+    .banner > .banner-inner > .banner-title {
+
+        text-align: center;
+    }

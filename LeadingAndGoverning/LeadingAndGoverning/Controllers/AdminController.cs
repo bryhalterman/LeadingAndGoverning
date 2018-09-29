@@ -22,5 +22,10 @@ namespace LeadingAndGoverning.Controllers
 
             return View();
         }
+
+        public ActionResult ContentManagement()
+        {
+            return View();
+        }
     }
 }

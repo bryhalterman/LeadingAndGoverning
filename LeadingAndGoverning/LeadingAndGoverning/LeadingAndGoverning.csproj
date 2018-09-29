@@ -183,7 +183,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ExtenstionMethods\ExtenstionMethods.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +191,8 @@
       <DependentUpon>201711070314093_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ClientModels\ClientDetail.cs" />
+    <Compile Include="Models\ClientModels\ClientSectors.cs" />
     <Compile Include="Models\Tile.cs" />
     <Compile Include="SystemServices\ApplicationSettingsService.cs" />
     <Compile Include="SystemServices\ClientService.cs" />
@@ -214,6 +215,7 @@
     <Content Include="Content\Images\Backgrounds\paper_%402X.png" />
     <Content Include="Content\Images\Backgrounds\tileable_wood_texture.png" />
     <Content Include="Content\Images\Backgrounds\tileable_wood_texture_%402X.png" />
+    <Content Include="Content\Images\Backgrounds\topography.png" />
     <Content Include="Content\Images\Banners\^0E4F477E56ACE12D37C3760DE7F0BB194A3B4B4BF70B5ECBCF^pimgpsh_fullsize_distr.png" />
     <Content Include="Content\Images\Banners\banner-primary.jpg" />
     <Content Include="Content\Images\Banners\banner-primary.png" />
@@ -336,16 +338,17 @@
     <Content Include="Views\ServicesOLD\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Admin\ContentManagement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ExtenstionMethods\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>

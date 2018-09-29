@@ -262,7 +262,7 @@ hr {
 }
 
     .tile:hover {
-        box-shadow: gray 0px 0px 20px;
+        box-shadow: gray 0 0 20px;
     }
 
 .center {
@@ -316,3 +316,13 @@ hr {
 
         text-align: center;
     }
+
+.text-white {
+    color: #fff;
+}
+
+.panel-title a {
+    display: block;
+    padding: 10px 15px;
+    margin: -10px -15px;
+}

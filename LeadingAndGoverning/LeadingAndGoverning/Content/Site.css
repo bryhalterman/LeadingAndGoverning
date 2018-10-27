@@ -301,12 +301,6 @@ hr {
 }
     .banner > .banner-inner {
         padding-top: 5px;
-        /*background-color: rgba(46, 139, 87, 0.25);*/
-        /*background-image: url('Images/Backgrounds/tileable_wood_texture.png');*/
-        /*background-image: url('Images/Backgrounds/paper.png');*/
-
-        /*background-image: url('Images/Backgrounds/Seigaiha.png');*/
-        /*background-image: url('Images/Backgrounds/light_toast.png');*/
         background-repeat: repeat;
         border-radius: 3px;
         border-bottom: solid #e2e2e2;
@@ -325,4 +319,25 @@ hr {
     display: block;
     padding: 10px 15px;
     margin: -10px -15px;
+}
+
+.img-contactus {
+    border: solid white 5px;
+    border-radius: 5px;
+    height: 274px;
+    width: 217px;
+    max-height: 274px;
+    max-width: 217px;
+}
+
+.pad-top-5 {
+    padding-top: 5px;
+}
+
+.pad-top-10 {
+    padding-top: 10px;
+}
+
+.pad-top-15 {
+    padding-top: 15px;
 }
